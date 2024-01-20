@@ -314,3 +314,7 @@ func (c *ComfyClient) OnWindowSocketMessage(msg string) {
 		// sm.Data = nil
 	}
 }
+
+func (c *ComfyClient) Close() error {
+	return c.webSocket.Close()
+}
